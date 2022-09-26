@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            width:860px;
+            padding:10px;
+            margin:10px auto;
+            background-color:black;
+            color:cadetblue;
+            text-align:justify;
+            overflow: auto;
+            height: 400px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+         
+        }
+
+        button{
+            display: block;
+            width:860px;
+            margin: auto;
+            }
+    </style>
+     <script src="lib/jquery-3.6.1.js"></script>
+    <script>
+        let promise=null;
+        $(function(){
+            $("button").click(function(){
+               //*********** load data through json file  *********//
+                // promise=$.getJSON("lib/data.json");
+                // promise.fail(function(err,s,jqhr){
+                //     console.log(err)
+                // })
+                // promise.done(function(res,status,jqhr){
+                //     $(res.root.participant).each(function(idx,val){
+                //        // console.log(val.firstname);
+                //         $(".container").append("<p>"+val.firstname+" " +val.lastname)
+                //     })
+                // })
+
+                promise=$.ajax({
+                    url:"lib/data.txt",
+                    cache:false,
+                    timeout:4000
+                });
+                promise.done(function(res,status,jqxhr){
+                    $(".container").append(res);
+                })
+
+
+                //*********  load data through .txt file  ********//
+            //    $('.container').load("lib/data.txt",function(res,status,jqhr){
+            //     console.log(jqhr.statusText);
+            //   });
+            });
+        })
+    </script>
+
+</head>
+<body>
+    <button>GET DATA</button>
+    <div class="container"></div>
+</body>
+</html>

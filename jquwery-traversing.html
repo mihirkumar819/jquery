@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="lib/jquery-3.6.1.js"></script>
+    <script>
+        // function init(){
+        //     alert("welcome")
+        // }
+        $();
+        $(()=>{
+            $("p").first().css("background-color","Green");
+            $("p").first().next().next().css("background-color","Blue");
+           // alert($("li").length)
+          // alert($("li,p").length)
+           $(".list3").appendTo(".list1");
+           $("ul li").css("border","2px solid purple");
+           $("ol li").css("border","2px dotted orange");
+           $(".list3").after(" Mihir Kumar");
+           $(".list3").css("color","red");
+           $(".list3").append($(".list1").text());
+          // $(".list6").css("color","green");
+          // $(".list6").css("color","green");
+           $(".list5").css("color","orange");
+           $(".list5").appendTo(".list6");
+           $(".list5").appendTo(".a");
+           $(".c").prependTo(".b");
+
+
+
+
+
+
+
+        })
+    </script>
+</head>
+<body>
+    <h1> Traversing in JQuery</h1>
+    <ul>
+        <li class="list1"> Item1 </li>
+        <li> Item2 </li>
+        <li class="list3"> Item3 </li>
+        <li> Item4 </li>
+        <li class="list5"> Item5 </li>
+        <li class="list6"> Item6 </li>
+
+    </ul>
+    <ol>
+        <li class="a">Ordered list 1</li>
+        <li  class="b">Ordered list 2</li>
+        <li  class="c">Ordered list 3</li>
+        <li>Ordered list 4</li>
+        <li>Ordered list 5</li>
+
+
+    </ol>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae rerum tempore odio facere ad laudantium, hic error optio nihil deserunt dolorem amet, accusamus nobis cupiditate sapiente. Exercitationem eum voluptas dolores!</p>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere, cumque facilis. Alias ipsam labore officiis! Quia est quidem officiis magnam laborum aspernatur recusandae! Magni nulla tempora, ipsam unde dolores ratione?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda aspernatur sunt animi voluptatem? Temporibus officia, impedit consectetur autem vel, perspiciatis modi et a explicabo nihil error placeat corporis, sed doloremque!</p>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id quae, ipsa nemo eos, odio suscipit rem praesentium dicta laudantium in a magni repudiandae culpa cumque laboriosam commodi voluptatum ullam repellat.</p>
+</body>
+</html>
